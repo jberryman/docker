@@ -45,7 +45,7 @@ binary: build
 	$(DOCKER_RUN_DOCKER) hack/make.sh binary
 
 dynbinary: build
-    $(DOCKER_RUN_DOCKER) hack/make.sh dynbinary
+	$(DOCKER_RUN_DOCKER) hack/make.sh dynbinary
 
 cross: build
 	$(DOCKER_RUN_DOCKER) hack/make.sh binary cross
