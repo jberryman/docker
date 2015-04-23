@@ -20,7 +20,7 @@ func New(tag string) (logger.Logger, error) {
 	if syslog_socket == "" {
 		syslog_socket = "/dev/log"
 	}
-	log, err := syslog.Dial("unix" , syslog_socket , syslog.LOG_DAEMON, fmt.Sprintf("%s/%s", path.Base(os.Args[0]), tag))
+	log, err := syslog.Dial("unixgram" , syslog_socket , syslog.LOG_DAEMON, fmt.Sprintf("%s/%s", path.Base(os.Args[0]), tag))
 	if err != nil {
 		return nil, err
 	}
